@@ -10,11 +10,13 @@
 // for the UI
 metadata {
 	// Automatically generated. Make future change here.
-	definition (name: "SmartWeather Station Tile", namespace: "mjarends", author: "SmartThings") {
+	definition (name: "SmartWeather Station Tile", namespace: "mjarends", author: "SmartThings/Mitch Arends") {
 		capability "Illuminance Measurement"
 		capability "Temperature Measurement"
 		capability "Water Sensor"
 		capability "Relative Humidity Measurement"
+		capability "Sensor"
+		capability "Polling"
 		capability "polling"
 
 		attribute "localSunrise", "string"
@@ -171,6 +173,18 @@ metadata {
 // parse events into attributes
 def parse(String description) {
 	log.debug "Parsing '${description}'"
+}
+
+def installed() {
+	runPeriodically(3600, poll)
+}
+
+def uninstalled() {
+	unschedule()
+}
+
+def updated() {
+	runPeriodically(3600, poll)
 }
 
 // handle commands
