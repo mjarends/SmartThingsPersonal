@@ -7,8 +7,8 @@ This is an internet-based weather station SmartDevice for your SmartThings Hub. 
 automatically use your Hub's (or pre-defined) location for the current conditions.
 
 Credit for this device type goes to:
-#SmartThings
-#yracine
+SmartThings
+yracine
 
 ## Installation
 
