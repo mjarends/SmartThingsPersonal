@@ -6,29 +6,27 @@ http://build.smartthings.com/projects/weatherstation/
 This is an internet-based weather station SmartDevice for your SmartThings Hub.  This device will
 automatically use your Hub's (or pre-defined) location for the current conditions.
 
+Credit for this device type goes to:
+#SmartThings
+#yracine
+
 ## Installation
 
-1. Create a new device type (https://graph.api.smartthings.com/ide/devices)
-
-a) Hit the "+New SmartDevice" at the top right corner, choose a device name
-
-b) Hit the "From Code" tab on the left corner
-
-c) Copy and paste the code from device-type.weatherstation.groovy under https://github.com/yracine/device-type.weatherstation
-
-d) Hit the create button at the bottom
-
-e) Hit the "publish/for me" button at the top right corner (in the code window)
-
-
-2. Create a new device (https://graph.api.smartthings.com/device/list)
-    * Name: Your choice
-    * Device Network Id: WEATHERSTATION-01 (increase for each weather station you add)
-    * Type: Smart WeatherStation Tile (should be near the last option)
-    * Location: Choose the correct location
-    * Hub/Group: Choose a hub (this will autopopulate the zipcode)
-
-
+### Install Using GitHub Integration
+Follow these steps (all within the SmartThings IDE):
+- Click on the `My Device Types` tab
+- Click `Settings`
+- Click `Add new repository` and use the following parameters:
+  - Owner: `mjarends`
+  - Name: `SmartThingsPersonal`
+  - Branch: `master`
+- Click `Save`
+- Click `Update from Repo` and select the repository we just added above
+- Find and Select `smartweather-station-tile.groovy`
+- Select `Publish`(bottom right of screen near the `Cancel` button)
+- Click `Execute Update`
+- Note the response at the top. It should be something like "`Updated 0 devices and created 1 new devices, 1 published`"
+- Verify that the two devices show up in the list and are marked with Status `Published`
 
 ## Use
 
