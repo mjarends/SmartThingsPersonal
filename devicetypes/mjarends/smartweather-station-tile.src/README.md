@@ -6,9 +6,7 @@ http://build.smartthings.com/projects/weatherstation/
 This is an internet-based weather station SmartDevice for your SmartThings Hub.  This device will
 automatically use your Hub's (or pre-defined) location for the current conditions.
 
-Credit for this device type goes to:
-SmartThings
-yracine
+Credit for this device type goes to SmartThings and yracine
 
 ## Installation
 
